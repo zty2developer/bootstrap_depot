@@ -1,0 +1,39 @@
+<%= form_for(product) do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+		<% if product.image_url_url %>
+    <%= image_tag product.image_url_url %>
+		<% end %>
+    <%= f.file_field :image_url, class: "form-control" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :price %>
+    <%= f.text_field :price, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit '提交', class: "btn btn-default" %>
+  </div>
+<% end %>
