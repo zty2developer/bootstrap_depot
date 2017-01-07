@@ -14,3 +14,13 @@
  *= require_self
  *= require bootstrap.min
  */
+
+body {
+	width: 70%;
+	border: 1px solid #eee;
+	margin: 0 auto;
+}
+.navbar-inverse {
+	background-color: #fcf8e3;
+	border-color: #fcf8e3;
+}
