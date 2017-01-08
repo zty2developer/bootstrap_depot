@@ -13,14 +13,17 @@
  *= require_tree .
  *= require_self
  *= require bootstrap.min
+ *= require store
  */
 
 body {
-	width: 70%;
-	border: 1px solid #eee;
+	background-color: #eee;
 	margin: 0 auto;
+  min-height: 800px;
+	*+height: 100%;
+	_height: 800px;
 }
 .navbar-inverse {
-	background-color: #fcf8e3;
-	border-color: #fcf8e3;
+	background-color: #fff;
+	border-color: #fff;
 }

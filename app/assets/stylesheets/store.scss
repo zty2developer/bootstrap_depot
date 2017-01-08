@@ -1,0 +1,47 @@
+// Place all the styles related to the store controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.book-categories {
+	background-color: #fff;
+	height: 600px;
+	margin-left: 11.75%;
+}
+
+.book-list {
+	background-color: #fff;
+	height: 100%;
+	margin-left: 1.5%;
+	h2 {
+		margin: 15px 0 15px 10px;
+	}
+	.single-book {
+		margin: 0 10px 10px 10px;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		.book-image {
+			float: left;
+			width: 20%;
+			height: 100%;
+		}
+		.book-info{
+			width: 80%;
+			height: 100%;
+			margin-left: 20%;
+			.product-title {
+				margin: 5px 0 10px 10px;
+				font-weight: bold;
+				font-size: 16px;
+			}
+			.product-des {
+				margin: 0 20px 10px 10px;
+			}
+		}
+	}
+	.product-price {
+		margin: 5px 0 10px 10px;
+		border-bottom: 1px solid #eee;
+	}
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="book-categories col-md-2">
+			<h2>Book-Categories</h2>
+		</div>
+		<div class="book-list col-md-7">
+			<div class="row">
+				<h2>Book-List</h2>
+				<% @products.each do |product| %>
+				<div class="single-book">
+					<div class="book-image"><%= image_tag product.image_url_url %> </div>
+					<div class="book-info">
+						<p class="product-title"><%= product.title %></p>
+						<p class="product-des"><%= product.description %></p>
+					</div>
+				</div>
+				<p class="product-price"><%= number_to_currency product.price %></p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
