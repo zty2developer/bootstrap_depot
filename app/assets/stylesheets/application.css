@@ -20,10 +20,17 @@ body {
 	background-color: #eee;
 	margin: 0 auto;
   min-height: 800px;
-	*+height: 100%;
-	_height: 800px;
 }
 .navbar-inverse {
 	background-color: #fff;
 	border-color: #fff;
+}
+.notice {
+	margin: 0px auto 10px auto;
+	line-height: 30px;
+	padding-left: 10px;
+	background-color: white;
+	width: 76.5%;
+	display: none;
+	color: gray;
 }
