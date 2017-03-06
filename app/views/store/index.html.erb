@@ -32,15 +32,9 @@
 						<p class="book-list__des"><%= product.description %></p>
 					</div>
 				</div>
-<<<<<<< HEAD
-				<div class="price-line">
-					<span class="product-price"><%= number_to_currency product.price %></span>
-					<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-default btn-add-to-cart" %>
-=======
 				<div class="book-list__price-line">
 					<span class="book-list__price"><%= number_to_currency product.price %></span>
-					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "book-list__add-to-cart" %>
->>>>>>> 73193e1dffa2199d103b3e585e8aaf29caa577f0
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn book-list__add-to-cart" %>
 				</div>
 				<% end %>
 			</div>

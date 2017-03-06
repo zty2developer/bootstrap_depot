@@ -25,21 +25,12 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
 		@cart = current_cart
-<<<<<<< HEAD
 		product = Product.find(params[:product_id])
 		@line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
         format.html { redirect_to store_index_path, notice: 'Line item was successfully created.' }
-=======
-		@product = Product.find(params[:product_id])
-		@line_item = @cart.line_items.build(product_id: @product.id)
-
-    respond_to do |format|
-      if @line_item.save
-        format.html { redirect_to root_path, notice: "#{@product.title} was successfully added to cart" }
->>>>>>> 73193e1dffa2199d103b3e585e8aaf29caa577f0
         format.json { render :show, status: :created, location: @line_item }
       else
         format.html { render :new }
