@@ -1,3 +1,6 @@
+<% if notice %>
+	<p class="notice"><%= notice %></p>
+<% end %>
 <div class="container-fluid">
 	<div class="row">
 		<div class="book-categories col-lg-2">
@@ -22,16 +25,22 @@
 			<div class="row">
 				<h2>Book-List</h2>
 				<% @products.each do |product| %>
-				<div class="single-book">
-					<div class="book-image"><%= image_tag product.image_url_url %> </div>
-					<div class="book-info">
-						<p class="product-title"><%= product.title %></p>
-						<p class="product-des"><%= product.description %></p>
+				<div class="book-list__ele">
+					<div class="book-list__image"><%= image_tag product.image_url_url %> </div>
+					<div class="book-list__info">
+						<p class="book-list__title"><%= product.title %></p>
+						<p class="book-list__des"><%= product.description %></p>
 					</div>
 				</div>
+<<<<<<< HEAD
 				<div class="price-line">
 					<span class="product-price"><%= number_to_currency product.price %></span>
 					<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-default btn-add-to-cart" %>
+=======
+				<div class="book-list__price-line">
+					<span class="book-list__price"><%= number_to_currency product.price %></span>
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "book-list__add-to-cart" %>
+>>>>>>> 73193e1dffa2199d103b3e585e8aaf29caa577f0
 				</div>
 				<% end %>
 			</div>

@@ -16,30 +16,31 @@
 	h2 {
 
 	}
-	.single-book {
+	.book-list__ele {
 		margin: 0 10px 10px 10px;
 		width: 100%;
 		height: 100%;
 		overflow: auto;
-		.book-image {
+		.book-list__image {
 			float: left;
 			width: 20%;
 			height: 100%;
 		}
-		.book-info{
+		.book-list__info{
 			width: 80%;
 			height: 100%;
 			margin-left: 20%;
-			.product-title {
+			.book-list__title {
 				margin: 5px 0 10px 10px;
 				font-weight: bold;
 				font-size: 16px;
 			}
-			.product-des {
+			.book-list__des {
 				margin: 0 20px 10px 10px;
 			}
 		}
 	}
+<<<<<<< HEAD
 	.price-line{
 		display: inline;
 		.product-price {
@@ -54,4 +55,17 @@
 			border-radius: 5px;
 		}
 	}	
+=======
+	.book-list__price-line {
+		margin: 5px 0 10px 10px;
+		border-bottom: 1px solid #eee;
+		.book-list__price {
+			float: left;
+			line-height: 24px;
+		}
+		.book-list__add-to-cart {
+			margin-left: 130px;
+		}
+	}
+>>>>>>> 73193e1dffa2199d103b3e585e8aaf29caa577f0
 }
