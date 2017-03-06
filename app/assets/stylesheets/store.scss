@@ -14,7 +14,7 @@
 	height: 100%;
 	margin-left: 1.5%;
 	h2 {
-		margin: 15px 0 15px 10px;
+
 	}
 	.single-book {
 		margin: 0 10px 10px 10px;
@@ -40,8 +40,18 @@
 			}
 		}
 	}
-	.product-price {
-		margin: 5px 0 10px 10px;
-		border-bottom: 1px solid #eee;
-	}
+	.price-line{
+		display: inline;
+		.product-price {
+			margin: 5px 0 10px 10px;
+			border-bottom: 1px solid #eee;
+		}
+		form {
+			display: inline;
+		}
+		.btn-add-to-cart{
+			margin-left: 200px;
+			border-radius: 5px;
+		}
+	}	
 }

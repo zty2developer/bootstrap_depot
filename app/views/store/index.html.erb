@@ -1,7 +1,22 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="book-categories col-md-2">
-			<h2>Book-Categories</h2>
+		<div class="book-categories col-lg-2">
+			<h2>Your Pragmatic Cart</h2>
+			<table class="cart_list">
+				<tr>
+					<th>Product</th>
+					<th>Price</th>
+					<th>Quantity</th>
+				</tr>
+				<% @cart.line_items.each do |item| %>
+				<tr>
+					<td class="cart_list-title"><%= item.product.title %></td>
+					<td class="cart_list-price"><%= item.product.price %></td>
+					<td class="cart_list-quantity"><%= item.quantity %></td>
+				</tr>
+				<% end %>
+			</table>
+			<p class="cart_total">总计: <%= number_to_currency(@cart.total) %></p>
 		</div>
 		<div class="book-list col-md-7">
 			<div class="row">
@@ -14,7 +29,10 @@
 						<p class="product-des"><%= product.description %></p>
 					</div>
 				</div>
-				<p class="product-price"><%= number_to_currency product.price %></p>
+				<div class="price-line">
+					<span class="product-price"><%= number_to_currency product.price %></span>
+					<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-default btn-add-to-cart" %>
+				</div>
 				<% end %>
 			</div>
 		</div>
