@@ -1,0 +1,15 @@
+
+<% if @cart && @cart.line_items.empty? %>
+	<p class="book_cart-empty_notice">Your cart is Empty!<p>
+<% elsif @cart && @cart.line_items.present? %>
+	<ul class="book_cart-list">
+		<% @cart.line_items.each do |item| %>
+			<li class="book_cart-list_ele" id="book_cart-list_ele_<%= item.id %>">
+			<span class="cart_list-quantity"><%= item.quantity %> x </span>
+			<span class="cart_list-title"><%= item.product.title %></span>
+		</li>
+		<% end %>
+	</ul>
+<% end %>
+<p class="book_cart-total">Total : <%= number_to_currency(@cart.total) %></p>
+<%= button_to "Empty Cart", @cart, method: :delete, confim: "Are you sure to empty your cart?", class: "btn btn-danger book_cart-btn_empty" %>

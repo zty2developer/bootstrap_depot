@@ -1,4 +1,5 @@
 class Product < ApplicationRecord
+	paginates_per 3
 	has_many :line_items, dependent: :destroy
 
 	validates :title, :description, presence: true

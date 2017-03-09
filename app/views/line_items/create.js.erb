@@ -1,0 +1,7 @@
+$(".book_cart-list_wrapper").html("<%= j render("store/line_items") %>");
+$("#book_cart-list_ele_<%= @line_item.id %>").animate({
+	backgroundColor: "#ff2832"
+}, 1500);
+$("#book_cart-list_ele_<%= @line_item.id %>").animate({
+	backgroundColor: "#fff"
+}, 1500);

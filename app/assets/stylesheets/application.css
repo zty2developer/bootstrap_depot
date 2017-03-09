@@ -21,6 +21,9 @@ body {
 	margin: 0 auto;
   min-height: 800px;
 }
+.pagination {
+	padding-left: 10px;
+}
 .navbar-inverse {
 	background-color: #fff;
 	border-color: #fff;
@@ -29,8 +32,10 @@ body {
 	margin: 0px auto 10px auto;
 	line-height: 30px;
 	padding-left: 10px;
-	background-color: white;
-	width: 76.5%;
+	background-color: #ff2832;
+	width: 68%;
 	display: none;
-	color: gray;
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
 }
