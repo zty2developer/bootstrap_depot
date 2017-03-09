@@ -7,14 +7,10 @@
 	background-color: #fff;
 	height: 600px;
 	margin-left: 15%;
-	padding: 0;
 	
 	.book_cart-title {
-		color: #fff;
-		font-weight: bold;
-		background-color: #ff2832;
-		margin: 0;
-		padding: 10px 0 10px 10px;
+		color: #333;
+		font-weight: 500;
 	}
 	.book_cart-list_wrapper {
 		width: 100%;
@@ -23,7 +19,7 @@
 			font-size: 14px;
 			color: #666;
 			font-weight: bold;
-			margin: 0 30px;
+			margin: 0 15px;
 			padding: 0;
 
 		  .book_cart-list_ele {
@@ -32,7 +28,7 @@
 		}
 	}
 	.book_cart-total {
-		margin: 0 0 20px 20px;
+		margin: 0 0 20px 0;
 		font-size: 16px;
 		font-weight: bold;
 		color: #f00;
@@ -45,14 +41,11 @@
 	margin-left: 1.5%;
 
 	.book_list-title {
-		color: #fff;
-		font-weight: bold;
-		padding: 10px 0 10px 10px;
-		margin: 0;
-		background-color: #ff2832;
+		color: #333;
+		margin-left: 10px;
 	}
 	.book_list-ele {
-		margin: 5px 10px;
+		margin: 0 10px 10px 10px;
 		width: 100%;
 		height: 100%;
 		overflow: auto;
@@ -81,17 +74,16 @@
 		}
 	}
 	.book_list-price_line {
-		padding: 0px 0 5px 10px;
+		padding: 5px 0 5px 10px;
 		border-bottom: 1px solid #eee;
 		.book_list-product_price {
 			float: left;
 			font-size: 20px;
 			color: #f00;
 			line-height: 24px;
-			margin-top: 8px;
 		}
 		.book_list-add_to_cart {
-			margin-left: 110px;
+			margin-left: 130px;
 		}
 	}
 }

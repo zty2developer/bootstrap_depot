@@ -3,38 +3,34 @@
 <% end %>
 <div class="container-fluid">
 	<div class="row">
-		<div class="book-categories col-lg-2">
-			<h2>Your Pragmatic Cart</h2>
-			<table class="cart_list">
-				<tr>
-					<th>Product</th>
-					<th>Price</th>
-					<th>Quantity</th>
-				</tr>
+		<div class="book_cart col-lg-2">
+			<h2 class="book_cart-title">Your Pragmatic Cart</h2>
+			<div class="book_cart-list_wrapper">
+				<ul class="book_cart-list">
 				<% @cart.line_items.each do |item| %>
-				<tr>
-					<td class="cart_list-title"><%= item.product.title %></td>
-					<td class="cart_list-price"><%= item.product.price %></td>
-					<td class="cart_list-quantity"><%= item.quantity %></td>
-				</tr>
+					<li class="book_cart-list_ele">
+						<span class="cart_list-quantity"><%= item.quantity %> x </span>
+						<span class="cart_list-title"><%= item.product.title %></span>
+					</li>
 				<% end %>
-			</table>
-			<p class="cart_total">总计: <%= number_to_currency(@cart.total) %></p>
+				</ul>
+			</div>
+			<p class="book_cart-total">总计: <%= number_to_currency(@cart.total) %></p>
 		</div>
-		<div class="book-list col-md-7">
+		<div class="book_list col-md-6">
 			<div class="row">
-				<h2>Book-List</h2>
+				<h2 class="book_list-title">Book List</h2>
 				<% @products.each do |product| %>
-				<div class="book-list__ele">
-					<div class="book-list__image"><%= image_tag product.image_url_url %> </div>
-					<div class="book-list__info">
-						<p class="book-list__title"><%= product.title %></p>
-						<p class="book-list__des"><%= product.description %></p>
+				<div class="book_list-ele">
+					<div class="book_list-product_image"><%= image_tag product.image_url_url %> </div>
+					<div class="book_list-product_info">
+						<p class="book_list-product_title"><%= product.title %></p>
+						<p class="book_list-product_des"><%= product.description %></p>
 					</div>
 				</div>
-				<div class="book-list__price-line">
-					<span class="book-list__price"><%= number_to_currency product.price %></span>
-					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn book-list__add-to-cart" %>
+				<div class="book_list-price_line">
+					<span class="book_list-product_price"><%= number_to_currency product.price %></span>
+					<%= button_to 'Add to Cart', line_items_path(product_id: product), class: "btn btn-default book_list-add_to_cart" %>
 				</div>
 				<% end %>
 			</div>
