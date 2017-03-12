@@ -1,0 +1,31 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.order_form {
+	background-color: #fff;
+}
+
+// new order css
+.new_order-title {
+	text-align: center;
+	background-color: #fff;
+	margin: 40px auto 0 25%;
+	padding: 10px 0 0 0;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.new_order-back {
+	display: inline-block;
+	width: 50%;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 0 10px 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	&:hover {
+		color: #333;
+		background-color: #fff;
+	}
+}

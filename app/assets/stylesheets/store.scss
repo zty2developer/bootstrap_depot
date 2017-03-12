@@ -2,64 +2,70 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.book_cart {
-	background-color: #fff;
-	height: 600px;
-	margin-left: 16%;
+.column_title {
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 0 10px 10px;
+	margin: 0;
+	background-color: #5cb85c;
+}
+.book_cart_and_sort {
 	padding: 0;
-	
-	.book_cart-title {
-		color: #fff;
-		font-weight: bold;
-		background-color: #ff2832;
-		margin: 0;
-		padding: 10px 0 10px 10px;
-	}
-	.book_cart-list_wrapper {
-		width: 100%;
-		margin: 20px 0px 10px 0px;
-		.book_cart-list {
-			font-size: 14px;
-			color: #666;
-			font-weight: bold;
-			margin: 0 30px;
-			padding: 0;
-		  .book_cart-list_ele {
-				padding: 5px 0;
+	.book_cart {
+		background-color: #fff;
+		padding: 0;
+		
+		.book_cart-list_wrapper {
+			width: 100%;
+			margin: 20px 0px 10px 0px;
+			padding-bottom: 10px;
+			.book_cart-list {
+				font-size: 14px;
+				color: #666;
+				font-weight: bold;
+				margin: 0 30px;
+				padding: 0;
+				.book_cart-list_ele {
+					padding: 5px 0;
+				}
 			}
 		}
+		.book_cart-empty_notice {
+			margin: 30px auto;
+			text-align: center;
+			font-size: 20px;
+			color: #ddd;
+		}
+		.book_cart-checkout_form {
+			float: left;
+			margin: 0 0 0 10px;
+			.book_cart-btn_checkout {
+				font-weight: bold;
+			}
+		}
+		.book_cart-btn_empty {
+			margin-left: 10px;
+			font-weight: bold;
+		}
+		.book_cart-total {
+			margin: 10px 0 10px 10px;
+			font-size: 16px;
+			font-weight: bold;
+			color: #f00;
+		}
 	}
-	.book_cart-empty_notice {
-		margin: 30px auto;
-		text-align: center;
-		font-size: 20px;
-		color: #ddd;
-	}
-	.book_cart-btn_empty {
-		margin-left: 10px;
-		font-weight: bold;
-	}
-	.book_cart-total {
-		margin: 10px 0 10px 10px;
-		font-size: 16px;
-		font-weight: bold;
-		color: #f00;
+
+	.book_category {
+		height: 500px;
+		background-color: #fff;
 	}
 }
-
 .book_list {
 	background-color: #fff;
 	height: 100%;
-	margin-left: 1.33333333%;
+	margin-left: 1%;
+	padding: 0;
 
-	.book_list-title {
-		color: #fff;
-		font-weight: bold;
-		padding: 10px 0 10px 10px;
-		margin: 0;
-		background-color: #ff2832;
-	}
 	.book_list-ele {
 		margin: 10px 10px;
 		width: 100%;
@@ -90,17 +96,20 @@
 		}
 	}
 	.book_list-price_line {
-		padding: 0px 0 5px 10px;
+		padding: 0 0 5px 10px;
 		border-bottom: 1px solid #eee;
 		.book_list-product_price {
 			float: left;
 			font-size: 20px;
-			color: #f00;
+			color: #5cb85c;
+			font-weight: bold;
 			line-height: 24px;
 			margin: 5px 0;
 		}
 		.book_list-add_to_cart {
 			margin-left: 110px;
+			font-weight: bold;
 		}
 	}
 }
+
