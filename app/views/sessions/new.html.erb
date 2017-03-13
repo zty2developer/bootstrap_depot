@@ -1,0 +1,18 @@
+<div class="sign_in col-lg-6 col-lg-offset-3 common_use_form">
+	<% if flash[:alert] %>
+		<p id="notice" class="notice"><%= flash[:alert] %></p>
+	<% end %>
+	<h1 class="sign_in-title">Please Log In</h1>
+
+	<%= form_tag do %>
+		<div class="form-group">
+			<label class="sign_in-name_title">User</label>
+			<input class="form-control sign_in-name" placeholder="Your user name" name="name">
+		</div>
+		<div class="form-group">
+			<label class="sign_in-password_title">Password</label>
+			<input type="password" class="form-control sign_in-password" placeholder="Your Password" name="password">
+		</div>
+		<button type="submit" class="btn btn-default sign_in-submit_btn">login</button>
+	<% end %>
+</div>

@@ -39,3 +39,30 @@ body {
 	font-weight: bold;
 	font-size: 16px;
 }
+
+/* form related */
+.title_aboved_form {
+	text-align: center;
+	background-color: #fff;
+	margin: 40px auto 0 25%;
+	padding: 10px 0 0 0;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.common_use_form {
+	background-color: #fff;
+}
+.link_belowed_form {
+	display: inline-block;
+	width: 50%;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 0 10px 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+.link_belowed_form:hover {
+	color: #333;
+	background-color: #fff;
+}

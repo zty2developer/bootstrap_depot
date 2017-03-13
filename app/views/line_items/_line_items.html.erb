@@ -1,0 +1,11 @@
+<div class="line_items">
+	<ul class="line_items-list">
+		<% @cart.line_items.each do |item| %>
+			<li class="line_items-list_ele" id="line_items-list_ele_<%= item.id %>">
+			<span class="line_items-quantity"><%= item.quantity %> x </span>
+			<span class="line_items-title"><%= item.product.title %></span>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<p class="line_items-total">Total : <%= number_to_currency(@cart.total) %></p>
