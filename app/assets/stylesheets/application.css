@@ -28,6 +28,19 @@ body {
 	background-color: #fff;
 	border-color: #fff;
 }
+.navbar_link_list {
+  float: left;
+}
+.locale {
+	float: right;
+	height: 20px;
+	margin: 15px auto;
+}
+.dropdown {
+	border-radius: 3px;
+	color: #9d9d9d; 
+	background-color: #fff;
+}
 .notice {
 	margin: 0px auto 10px auto;
 	line-height: 30px;

@@ -5,13 +5,16 @@ Rails.application.routes.draw do
 	post 'login' => "sessions#create"
 	delete 'logout' => "sessions#destroy"
 
-  resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
-  resources :products
+	scope '(:locale)' do
+		resources :users
+		resources :orders
+		resources :line_items
+		resources :carts
+		resources :products
 
-  get 'store/index'
-	
-	root "store#index"
+		get '/store/index'
+		post '/store/index'
+
+		root "store#index"
+	end
 end

@@ -1,0 +1,24 @@
+
+zh:
+  application:
+    home: "主页"
+    about: "关于"
+    contact: "联系我"
+
+  store:
+    index:
+      cart_title: "我的购物车"
+      sort_title: "图书分类"
+      list_title: "图书列表"
+      checkout: "前往付款"
+      emptycart: "清空购物车"
+      addtocart: "加入购物车"
+
+  number:
+    currency:
+      format:
+        unit: "￥"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"

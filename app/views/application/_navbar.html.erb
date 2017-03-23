@@ -8,16 +8,19 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">Bootstrap Depot</a>
+			<a class="navbar-brand" href="/">Pragmatic Store</a>
 		</div>
-		<div id="navbar" class="collapse navbar-collapse">
+		<div id="navbar" class="collapse navbar-collapse navbar_link_list">
 			<ul class="nav navbar-nav">
-				<li class="navbar-link"><a href="/">Home</a></li>
-				<li class="navbar-link"><a href="#about">About</a></li>
-				<li class="navbar-link"><a href="#contact">Contact</a></li>
+				<li class="navbar-link"><a href="/"><%= t('application.home')%></a></li>
+				<li class="navbar-link"><a href="#about"><%= t('application.about')%></a></li>
+				<li class="navbar-link"><a href="#contact"><%= t('application.contact')%></a></li>
 			</ul>
 		</div>
-		<div id="navbar" class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse">
+			<%= form_tag store_index_path, class: "locale" do %>
+				<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: "dropdown", onchange: 'this.form.submit()' %>
+			<% end %>
 		</div>
 	</div>
 </nav>
