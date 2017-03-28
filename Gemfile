@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 
+# specify ruby version
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record only on development and test
