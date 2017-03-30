@@ -1,3 +1,28 @@
 // Place all the styles related to the admin controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.admin, .admin_welcome{
+	background-color: #fff;
+}
+
+.admin_welcome-content {
+	font-size: 18px;
+	.admin_welcome-orders_count {
+		font-weight: bold;
+		color: red;
+	}
+}
+
+.admin-list {
+	padding-left: 20px;
+	color: #06c;
+	font-size: 16px;
+	li a {
+		color: #06c;
+	}
+}
+
+.admin-content {
+	margin-top: 0;
+}

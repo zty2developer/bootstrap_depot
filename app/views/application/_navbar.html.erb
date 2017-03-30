@@ -18,6 +18,15 @@
 			</ul>
 		</div>
 		<div class="collapse navbar-collapse">
+			<div class="navbar-user_info">
+				<% if session[:user_id].nil? %>
+					<%= link_to 'Login', login_path, class: "navbar-login" %>
+				<% else %>
+					<span class="navbar-user_name"><%= current_user.name %></span>
+					<%= link_to 'Logout', logout_path, class: "navbar-logout", method: :delete %>
+				<% end %>
+			</div>
+
 			<%= form_tag store_index_path, class: "locale" do %>
 				<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: "dropdown", onchange: 'this.form.submit()' %>
 			<% end %>

@@ -1,4 +1,14 @@
-<h1 class="admin_welcome-title">Welcome!</h1>
+<div class="admin_welcome col-lg-offset-3 col-lg-6">
+	<h1 class="admin_welcome-title">Welcome! <%= current_user.name %></h1>
 
-<p class="admin_welcome-content">It's <%= Time.now %>
-We have <%= pluralize(@total_orders, "order") %>
+	<p class="admin_welcome-content">It's <%= Time.now.asctime %> <span class="admin_welcome-orders_count"> And we have <%= pluralize(@total_orders, "order") %></span></p>
+</div>
+
+<div class="admin col-lg-6 col-lg-offset-3">
+	<h3 class="admin-content">请点击以下链接进行商店后台的管理</h3>
+	<ul class="admin-list">
+		<li class="admin-product_manager"><%= link_to "商品管理", products_path %></li>
+		<li class="admin-order_manager"><%= link_to "订单管理", orders_path %></li>
+		<li class="admin-user_manager"><%= link_to "用户管理", users_path %></li>
+	</ul>
+</div>
