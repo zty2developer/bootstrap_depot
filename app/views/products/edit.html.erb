@@ -1,6 +1,8 @@
-<h1>Editing Product</h1>
+<h1 class="h1--adjust_margin_and_padding bg_color_white col-lg-8 col-lg-offset-2">Editing Product</h1>
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<div class="col-lg-8 col-lg-offset-2 bg_color_white product-submit_btn_wrapper">
+	<%= link_to 'Show', @product, class: "btn btn-default product-submit_btn" %> 
+	<%= link_to 'Back', products_path, class: "btn btn-primary product-submit_btn" %>
+</div>

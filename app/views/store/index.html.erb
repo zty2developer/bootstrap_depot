@@ -21,7 +21,7 @@
 
 				<% @products.each do |product| %>
 				<div class="book_list-ele">
-					<div class="book_list-product_image"><%= image_tag product.image_url_url %> </div>
+					<div class="book_list-product_image"><%= image_tag product.image_url %> </div>
 					<div class="book_list-product_info">
 						<p class="book_list-product_title"><%= product.title %></p>
 						<p class="book_list-product_des"><%= product.description %></p>

@@ -13,4 +13,23 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
 			end
 		end
 	end
+
+	%w(text_field text_area url_field file_field collection_select select).each do |method_name|
+		define_method(method_name) do |method, *tag_value|
+			content_tag(:div, class: "form-group") do
+				label(method, class: 'col-lg-1 control-label')+ 
+					content_tag(:div, class: 'col-lg-11') do
+						super(method, *tag_value)
+					end
+			end
+		end
+	end
+
+	def submit(*tag_value)
+		content_tag(:div, class: 'form-group') do
+			content_tag(:div, class: 'col-lg-12 col-lg-offset-1') do
+				super
+			end
+		end
+	end
 end

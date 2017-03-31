@@ -21,6 +21,24 @@ body {
 	margin: 0 auto;
   min-height: 800px;
 }
+.h1--adjust_margin_and_padding {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 15px 10px;
+}
+.table--width_less {
+	width: 66.66666666% !important;
+}
+.table--no_margin_bottom {
+	margin-bottom: 0;
+}
+.form_img--padding_adjust {
+	padding: 0 0 14px 7px;
+}
+.bg_color_white {
+	background-color: white;
+}
+
 div.navbar-header a:hover {
 	color: #333 !important;
 }
@@ -52,7 +70,7 @@ ul.nav > li > a:hover {
 	line-height: 30px;
 	padding-left: 10px;
 	background-color: #5cb85c;
-	width: 68%;
+	width: 66.66666666%;
 	display: none;
 	color: #fff;
 	font-weight: bold;
