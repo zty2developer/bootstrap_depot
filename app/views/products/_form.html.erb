@@ -2,7 +2,7 @@
 	<%= f.error_messages %>
 
 	<%= f.text_field :title, class: "form-control" %>
-	<%= f.text_area :description, class: "form-control" %>
+	<%= f.text_area :description, class: "form-control", rows: 6 %>
 	<% if product.image_url %>
 	<%= image_tag product.image_url, class: "col-lg-offset-1 form_img--padding_adjust" %>
 	<% end %>

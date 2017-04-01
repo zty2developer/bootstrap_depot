@@ -14,7 +14,7 @@ class BootstrapFormBuilder < ActionView::Helpers::FormBuilder
 		end
 	end
 
-	%w(text_field text_area url_field file_field collection_select select).each do |method_name|
+	%w(password_field text_field text_area url_field file_field collection_select select).each do |method_name|
 		define_method(method_name) do |method, *tag_value|
 			content_tag(:div, class: "form-group") do
 				label(method, class: 'col-lg-1 control-label')+ 

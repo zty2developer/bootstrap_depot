@@ -1,21 +1,8 @@
-<%= simple_form_for(@user, html: { class: 'common_use_form col-lg-6 col-lg-offset-3'}) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= bootstrap_form_for(user, html: {class: "col-lg-8 col-lg-offset-2 bg_color_white form-horizontal form-label-left"})  do |f| %>
+	<%= f.error_messages %>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-	<%= f.input :name %>
-
-	<%= f.input :password, required: true %>
-
-	<%= f.input :password_confirmation, required: true %>
-
-	<%= f.button :submit %>
+	<%= f.text_field :name, class: "form-control" %>
+	<%= f.password_field :password, class: "form-control" %>
+	<%= f.password_field :password_confirmation, class: "form-control" %>
+	<%= f.submit 'Submit', class: "btn btn-default" %>
 <% end %>

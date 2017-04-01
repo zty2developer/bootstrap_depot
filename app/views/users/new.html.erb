@@ -1,5 +1,7 @@
-<h1 class="title_aboved_form col-lg-6 col-lg-offset-3">New User</h1>
+<h1 class="h1--adjust_margin_and_padding bg_color_white col-lg-8 col-lg-offset-2">New User</h1>
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Back', users_path, { class: "link_belowed_form col-lg-offset-3" } %>
+<div class="col-lg-8 col-lg-offset-2 bg_color_white edit_page-submit_btn_wrapper">
+	<%= link_to 'Back', users_path, class: "btn btn-primary edit_page-submit_btn" %>
+</div>

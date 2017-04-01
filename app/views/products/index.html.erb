@@ -1,6 +1,6 @@
 <p id="notice" class="notice"><%= notice %></p>
 
-<h1 class="bg_color_white product-title h1--adjust_margin_and_padding col-lg-8 col-lg-offset-2">Products</h1>
+<h1 class="bg_color_white edit_page-title h1--adjust_margin_and_padding col-lg-8 col-lg-offset-2">Products</h1>
 
 <table class="table table--width_less table--no_margin_bottom bg_color_white col-lg-offset-2">
   <thead>
@@ -21,14 +21,16 @@
 				<% if product.image_url %>
         <td><%= image_tag product.image_url%></td>
 				<% end %>
-        <td><%= product.price.round(2) %></td>
+        <td><%= product.price %></td>
         <td><%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary", role: "button" %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<%= paginate @products %>
 
-<div class="col-lg-8 col-lg-offset-2 bg_color_white product-submit_btn_wrapper">
-	<%= link_to 'New Product', new_product_path, class: "product-submit_btn btn btn-default" %>
+<div class="col-lg-8 col-lg-offset-2 bg_color_white edit_page-submit_btn_wrapper">
+	<%= link_to 'New Product', new_product_path, class: "edit_page-submit_btn btn btn-default" %>
 </div>
+

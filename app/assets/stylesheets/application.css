@@ -21,6 +21,7 @@ body {
 	margin: 0 auto;
   min-height: 800px;
 }
+/* form related common stylesheet */
 .h1--adjust_margin_and_padding {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -38,6 +39,16 @@ body {
 .bg_color_white {
 	background-color: white;
 }
+.edit_page-title {
+	border-bottom: 1px solid #eee;
+}
+.edit_page-submit_btn_wrapper {
+	border-top: 1px solid #eee;
+}
+.edit_page-submit_btn {
+	margin: 10px 0;
+}
+/*-----end------*/
 
 div.navbar-header a:hover {
 	color: #333 !important;
@@ -57,8 +68,7 @@ ul.nav > li > a:hover {
 }
 .locale {
 	float: right;
-	height: 20px;
-	margin: 15px auto;
+	margin: 8px auto;
 }
 .dropdown {
 	border-radius: 3px;
@@ -71,21 +81,16 @@ ul.nav > li > a:hover {
 	padding-left: 10px;
 	background-color: #5cb85c;
 	width: 66.66666666%;
-	display: none;
 	color: #fff;
 	font-weight: bold;
 	font-size: 16px;
 }
 .navbar-user_info {
-	color: #9d9d9d;
 	float: right;
-	height: 100%;
+	margin: 8px 0 8px 10px;
 }
-.navbar-login ,.navbar-logout {
+.navbar-login {
 	display: inline-block;
-	padding: 15px;
-	height: 50px;
-	text-decoration: none;
 }
 .navbar-user_name {
 	color: #333;

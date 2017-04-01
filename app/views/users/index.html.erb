@@ -1,14 +1,12 @@
-<% if notice %>
-	<p id="notice"><%= notice %></p>
-<% end %>
+<p id="notice" class="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="bg_color_white edit_page-title h1--adjust_margin_and_padding col-lg-8 col-lg-offset-2">Users</h1>
 
-<table>
+<table class="table table--width_less table--no_margin_bottom bg_color_white col-lg-offset-2">
   <thead>
     <tr>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th colspan="2"></th>
     </tr>
   </thead>
 
@@ -16,14 +14,14 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-primary", role: "button" %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
+<%= paginate @users %>
 
-<br>
-
-<%= link_to 'New User', new_user_path %>
+<div class="col-lg-8 col-lg-offset-2 bg_color_white edit_page-submit_btn_wrapper">
+	<%= link_to 'New user', new_user_path, class: "edit_page-submit_btn btn btn-default"%>
+</div>

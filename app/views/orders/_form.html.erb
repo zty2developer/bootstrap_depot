@@ -1,37 +1,9 @@
-<%= form_for order, html: {class: 'col-lg-6 col-lg-offset-3 order_form'} do |f| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+<%= bootstrap_form_for(order, html: {class: "col-lg-8 col-lg-offset-2 bg_color_white form-horizontal form-label-left"})  do |f| %>
+	<%= f.error_messages %>
 
-      <ul>
-      <% order.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "form-control", placeholder: "name" %>
-  </div>
-
-  <div class="field form-group">
-    <%= f.label :address %>
-    <%= f.text_area :address, class: "form-control", placeholder: "address" %>
-  </div>
-
-	<div class="field form-group">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "form-control", type: "email", placeholder: "email" %>
-  </div>
-
-  <div class="field form-group">
-    <%= f.label :pay_type %>
-		<%= f.select :pay_type, Order::PAYMENT_TYPES, {}, {class: "form-control"} %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit 'Submit', class: "btn btn-default" %>
-  </div>
+	<%= f.text_field :name, class: "form-control" %>
+	<%= f.text_field :address, class: "form-control"%>
+	<%= f.text_field :email, class: "form-control" %>
+	<%= f.text_field :pay_type, class: "form-control" %>
+	<%= f.submit 'Submit', class: "btn btn-default" %>
 <% end %>

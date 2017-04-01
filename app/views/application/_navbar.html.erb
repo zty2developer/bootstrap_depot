@@ -18,17 +18,25 @@
 			</ul>
 		</div>
 		<div class="collapse navbar-collapse">
-			<div class="navbar-user_info">
+			<div class="navbar-user_info navbar-right">
 				<% if session[:user_id].nil? %>
-					<%= link_to 'Login', login_path, class: "navbar-login" %>
+					<%= link_to 'Login', login_path, class: "navbar-login btn btn-primary" %>
 				<% else %>
-					<span class="navbar-user_name"><%= current_user.name %></span>
-					<%= link_to 'Logout', logout_path, class: "navbar-logout", method: :delete %>
+					<div class="btn-group">
+					  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<%= current_user.name %> <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu">
+							<li>
+								<%= link_to 'Logout', logout_path, method: :delete %>
+							</li>
+					  </ul>
+					</div>
 				<% end %>
 			</div>
 
 			<%= form_tag store_index_path, class: "locale" do %>
-				<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: "dropdown", onchange: 'this.form.submit()' %>
+				<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), class: " form-control", onchange: 'this.form.submit()' %>
 			<% end %>
 		</div>
 	</div>
