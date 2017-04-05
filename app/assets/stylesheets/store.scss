@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@media (max-width: 1400px) {
+	.book_cart-btn_empty, .book_cart-btn_checkout {
+		font-size: 10px;
+	}
+	.book_cart-title, .book_list-title, .book_category-title {
+		font-size: 20px;
+	}
+}
 .column_title {
 	color: #fff;
 	font-weight: bold;
