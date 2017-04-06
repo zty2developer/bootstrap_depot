@@ -1,3 +1,5 @@
+require 'carrierwave/orm/activerecord'
+
 class Product < ApplicationRecord
 	paginates_per 3
 	has_many :line_items, dependent: :destroy
