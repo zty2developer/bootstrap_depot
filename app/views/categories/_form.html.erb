@@ -1,0 +1,6 @@
+<%= bootstrap_form_for(category, html: {class: "col-lg-8 col-lg-offset-2 bg_color_white form-horizontal form-label-left"})  do |f| %>
+	<%= f.error_messages %>
+
+	<%= f.text_field :name, class: "form-control" %>
+	<%= f.submit 'Submit', class: "btn btn-default" %>
+<% end %>

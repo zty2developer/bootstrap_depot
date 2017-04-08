@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="book_cart_and_sort col-lg-2 col-md-2 col-sm-2 col-lg-offset-2">
 			<div class="book_cart">
-			<h2 class="column_title book_cart-title"><%= t("store.index.cart_title") %></h2>
+				<h2 class="column_title book_cart-title"><%= t("store.index.cart_title") %></h2>
 				<div class="book_cart-list_wrapper">
 					<%= render "line_items" %>
 				</div>
@@ -13,27 +13,24 @@
 
 			<div class="book_category">
 				<h2 class="column_title book_category-title"><%= t("store.index.sort_title") %></h2>
+				<ul class="book_category-list">
+					<% if @categories.empty? %>
+						<li class="book_category-ele">There is no classification!</li>
+					<% else %>
+						<% @categories.each do |category| %>
+							<li class="book_category-ele" data-category-id="<%= category.id %>"><%= link_to "#{category.name}", store_category_path(category_id: category.id), class: "book_category-ele_link", remote: true, method: :post %></li>
+						<% end %>
+					<% end %>
+				</ul>
 			</div>
 		</div>
 
 		<div class="book_list col-sm-6 col-md-6 col-lg-6">
 			<h2 class="column_title book_list-title"><%= t("store.index.list_title") %></h2>
 
-			<% @products.each do |product| %>
-				<div class="book_list-ele">
-				<div class="book_list-product_image"><%= image_tag product.image_url %> </div>
-				<div class="book_list-product_info">
-					<p class="book_list-product_title"><%= product.title %></p>
-					<p class="book_list-product_des"><%= product.description %></p>
-				</div>
+			<div class="book_list-wrapper">
+				<%= render "products" %>
 			</div>
-
-			<div class="book_list-price_line">
-				<span class="book_list-product_price"><%= number_to_currency product.price %></span>
-				<%= button_to t(".addtocart"), line_items_path(product_id: product), class: "btn btn-success book_list-add_to_cart", remote: true %>
-			</div>
-			<% end %>
-
 			<%= paginate @products %>
 		</div>
 

@@ -1,0 +1,27 @@
+<p id="notice" class="notice"><%= notice %></p>
+
+<h1 class="bg_color_white edit_page-title h1--adjust_margin_and_padding col-lg-8 col-lg-offset-2">Categories</h1>
+
+<table class="table table--width_less table--no_margin_bottom bg_color_white col-lg-offset-2">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+        <td><%= link_to 'Edit', edit_category_path(category), class: "btn btn-primary", role: "button" %></td>
+        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger", role: "button" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @categories %>
+
+<div class="col-lg-8 col-lg-offset-2 bg_color_white edit_page-submit_btn_wrapper">
+	<%= link_to 'New Category', new_category_path, class: "edit_page-submit_btn btn btn-default"%>
+</div>

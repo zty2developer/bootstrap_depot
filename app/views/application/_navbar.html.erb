@@ -13,8 +13,8 @@
 		<div id="navbar" class="collapse navbar-collapse navbar_link_list">
 			<ul class="nav navbar-nav">
 				<li class="navbar-link"><a href="/"><%= t('application.home')%></a></li>
-				<li class="navbar-link"><a href="#about"><%= t('application.about')%></a></li>
-				<li class="navbar-link"><a href="#contact"><%= t('application.contact')%></a></li>
+				<li class="navbar-link"><a href="/about"><%= t('application.about')%></a></li>
+				<li class="navbar-link"><a href="/contact"><%= t('application.contact')%></a></li>
 			</ul>
 		</div>
 		<div class="collapse navbar-collapse">
@@ -29,7 +29,7 @@
 					  <ul class="dropdown-menu">
 							<li>
 								<%= link_to 'Logout', logout_path, method: :delete %>
-								<%= link_to 'Control Panel', admin_index_path %>
+								<%= link_to 'Control Panel', admin_path %>
 							</li>
 					  </ul>
 					</div>

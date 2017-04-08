@@ -6,9 +6,16 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 Product.destroy_all
-Order.destroy_all
+Category.destroy_all
 LineItem.destroy_all
+Order.destroy_all
 Cart.destroy_all
+
+Category.create!(name: "Computer Science")
+Category.create!(name: "Social Science")
+Category.create!(name: "Natural Science")
+Category.create!(name: "Military")
+Category.create!(name: "Philosophy")
 
 product = Product.new(title: 'Debug It for Rails Applicatin',
   description: 
@@ -21,7 +28,8 @@ product = Product.new(title: 'Debug It for Rails Applicatin',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
      },
-		 price: 23.65)
+	category_id: Category.first.id,
+	price: 23.65)
 File.open(File.join(Rails.root, 'app/assets/images/debug.jpg')) do |f|
   product.image = f
 end
@@ -38,6 +46,7 @@ product1 = Product.new(title: 'Web Design for Developers',
         and work through a web site redesign, taking a new design from concept
         all the way to implementation.
      },
+	category_id: Category.first.id,
   price: 42.95)
 File.open(File.join(Rails.root, 'app/assets/images/wd4d.jpg')) do |f|
   product1.image = f
@@ -51,6 +60,7 @@ product2 = Product.new(title: 'Programming Ruby 1.9',
         out there. If you need to get working programs delivered fast,
         you should add Ruby to your toolbox.
      },
+	category_id: Category.first.id,
   price: 49.50)
 File.open(File.join(Rails.root, 'app/assets/images/ruby.jpg')) do |f|
   product2.image = f
@@ -68,13 +78,19 @@ product3 = Product.new(title: 'Rails Test Prescriptions',
         procedures for Rails 2 and Rails 3, and introduces popular add-ons,
         including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
      },
+	category_id: Category.first.id,
   price: 43.75)
 File.open(File.join(Rails.root, 'app/assets/images/rtp.jpg')) do |f|
   product3.image = f
 end
 product3.save!
 
+Cart.create!
+
 Order.create!(name: "talon", email: "792326645@qq.com", address: "长沙市岳麓区桐梓坡西路", pay_type: "Alipay")
 Order.create!(name: "harrold", email: "123456@qq.com", address: "湘潭市雨湖区河东大道", pay_type: "Alipay")
-Order.create!(name: "john", email: "654321@qq.com", address: "浏阳市官桥镇江边上", pay_type: "Alipay")
+Order.create!(name: "john", email: "654321@qq.com", address: "湘潭市岳塘区下摄司", pay_type: "Alipay")
 
+LineItem.create!(product_id: Product.first.id, order_id: Order.first.id, cart_id: Cart.first.id, quantity: 2)
+LineItem.create!(product_id: Product.second.id, order_id: Order.first.id, cart_id: Cart.first.id, quantity: 2)
+LineItem.create!(product_id: Product.third.id, order_id: Order.first.id, cart_id: Cart.first.id, quantity: 1)
