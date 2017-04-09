@@ -9,7 +9,7 @@ Rails.application.configure do
 		domain:               'gmail.com',
 		user_name:            'zty2email@gmail.com',
 		password:             'gmail@xiyang101',
-		authentication:       'login',
+		authentication:       'plain',
 		enable_starttls_auto: false
 	}
   # Code is not reloaded between requests.
