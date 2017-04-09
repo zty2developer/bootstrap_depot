@@ -10,7 +10,7 @@ Rails.application.configure do
 		user_name:            'zty2email@gmail.com',
 		password:             'gmail@xiyang101',
 		authentication:       'plain',
-		enable_starttls_auto: true
+		enable_starttls_auto: false
 	}
   # Code is not reloaded between requests.
   config.cache_classes = true
