@@ -26,3 +26,5 @@
 # Ignore .ruby-version
 .ruby-version
 
+# Ignore images upload by carrierwave
+/public/uploads
