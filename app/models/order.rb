@@ -11,4 +11,8 @@ class Order < ApplicationRecord
 			line_items << item
 		end
 	end
+	
+	def total
+		line_items.to_a.sum {|item| item.total_price }.to_f
+	end
 end
