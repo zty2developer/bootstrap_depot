@@ -1,5 +1,5 @@
 class NotifierMailer < ApplicationMailer
-	default from: 'ztyemail@126.com'
+	default from: 'zty2email@gmail.com'
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
