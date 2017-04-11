@@ -23,5 +23,6 @@ test:
 production:
   adapter: postgresql
   database: pragmatic_store_production
+  host: localhost
   pool: 5
   timeout: 5000
