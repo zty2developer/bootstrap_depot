@@ -22,7 +22,7 @@ test:
 
 production:
   adapter: postgresql
-  database: boostrap_depot_production
+  database: bootstrap_depot_production
   username: postgres
   password: 123456
   host: localhost
