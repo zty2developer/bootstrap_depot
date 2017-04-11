@@ -11,18 +11,18 @@ default: &default
 
 development:
   <<: *default
-  database: pragmatic_store_development
+  database: bootstrap_depot_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: pragmatic_store_test
+  database: bootstrap_depot_test
 
 production:
   adapter: postgresql
-  database: pragmatic_store_production
+  database: boostrap_depot_production
   username: postgres
   password: 123456
   host: localhost
