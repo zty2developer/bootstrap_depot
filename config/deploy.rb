@@ -23,6 +23,9 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
+set :default_env, {
+	'SECRET_KEY_BASE' => '45d6371f1b022a5d3eef38be71f97a3d3be6f040b3d2b3f9510c705cc4ad4f251189d6cc6e7d6f73547fcfa0afbee9014ce198b3f6db3bbff8f81df6379e48d2'
+}
 set :branch, ENV['BRANCH'] if ENV['BRANCH']
 ## Defaults:
 # set :scm,           :git
